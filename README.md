@@ -19,6 +19,8 @@ intel, and **responds** automatically (alerting and optional firewall blocking).
 
 ## Architecture
 See [docs/architecture.md](docs/architecture.md).
+<img width="2720" height="2760" alt="honeypot_detection_response_flow" src="https://github.com/user-attachments/assets/8edbdaae-fe96-406c-9bc2-38a25b79420b" />
+
 
 ```
 Attackers -> Cowrie -> Filebeat -> Elasticsearch -> Kibana

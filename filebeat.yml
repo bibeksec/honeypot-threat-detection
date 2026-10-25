@@ -1,0 +1,27 @@
+filebeat.inputs:
+  - type: filestream
+    id: cowrie-json
+    paths: ["/cowrie-logs/cowrie.json*"]
+    parsers:
+      - ndjson:
+          target: ""
+          overwrite_keys: true
+          add_error_key: true
+
+processors:
+  - timestamp:
+      field: timestamp
+      layouts: ["2006-01-02T15:04:05.999999Z", "2006-01-02T15:04:05Z"]
+      ignore_missing: true
+      ignore_failure: true
+  - drop_fields:
+      fields: ["timestamp"]
+      ignore_missing: true
+
+setup.ilm.enabled: false
+setup.template.name: "cowrie"
+setup.template.pattern: "cowrie-*"
+
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
+  index: "cowrie-%{+yyyy.MM.dd}"

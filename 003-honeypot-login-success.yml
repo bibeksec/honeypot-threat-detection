@@ -1,0 +1,7 @@
+id: HP-003
+title: Attacker obtained a shell
+description: A login succeeded on the honeypot. Everything after this is attacker activity.
+severity: high
+attack: [T1078]
+match:
+  eventid: cowrie.login.success

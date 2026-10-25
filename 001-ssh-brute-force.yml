@@ -1,0 +1,11 @@
+id: HP-001
+title: SSH brute force
+description: Many failed logins from one source in a short window.
+severity: medium
+attack: [T1110.001]
+match:
+  eventid: cowrie.login.failed
+threshold:
+  count: 10
+  window_seconds: 60
+  group_by: src_ip

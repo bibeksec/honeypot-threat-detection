@@ -1,0 +1,22 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements.txt
+      - name: Compile check
+        run: python -m compileall -q detections automation tests
+      - name: Rule + safety tests
+        run: python -m unittest discover -s tests -v
+      - name: ATT&CK table is up to date
+        run: |
+          python detections/engine.py --rules detections/rules --list-rules > /tmp/table.md
+          diff /tmp/table.md detections/attack-mapping.md
+      - name: Secret scan (basic)
+        run: |
+          ! grep -rEn "(AKIA[0-9A-Z]{16}|[0-9]{8,10}:AAH[A-Za-z0-9_-]{30,}|discord(app)?\.com/api/webhooks/[0-9]+)" \
+            --exclude-dir=.git .
